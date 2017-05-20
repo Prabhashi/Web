@@ -1,0 +1,108 @@
+/* login page style */
+body{
+	background-image:url(../../images/royal.jpg);
+	
+}
+
+#center{
+	width:250px;
+	height:280px;
+	background-color:rgba(0,0,0, 0.3);
+	margin:0 auto;
+	margin-top:60px;
+	padding: 20px;
+	border-radius:15px;
+	-webkit-border-radius: 15px;
+	font-weight:bold;
+	box-shadow:inset 5px 5px rgba(0,0,0, 0.3);
+}
+#center input[type="text"] , input[type="password"]{
+	width: 240px;
+	padding-left:30px;
+	margin-bottom: 10px;
+	height:30px;
+	border-color:#0000ee;
+	border-radius:12px;
+	-webkit-border-radius: 12px;
+	
+}
+
+#center a{
+	color: #ee77aa;
+	font-family:cambria;
+	font-size: 12pt;
+	margin-bottom:10px;
+
+}
+#center input[type="submit"]{
+	color:white;
+	background:blue;
+	font-weight:bold;
+	width:100px;
+	height:30px;
+	margin:0 auto;
+}
+/* Register page style */
+
+
+#center{
+	width:250px;
+	height:400px;
+	background-color:rgba(0,0,0, 0.3);
+	margin:0 auto;
+	margin-top:60px;
+	padding: 20px;
+	border-radius:15px;
+	-webkit-border-radius: 15px;
+	font-weight:bold;
+	box-shadow:inset 5px 5px rgba(0,0,0, 0.3);
+}
+#center input[type="text"] , input[type="password"]{
+	width: 240px;
+	padding-left:30px;
+	margin-bottom: 10px;
+	height:30px;
+	border-color:#0000ee;
+	border-radius:12px;
+	-webkit-border-radius: 12px;
+	
+}
+
+#center a{
+	color: #ee23aa;
+	font-family:cambria;
+	font-size: 14pt;
+	margin-bottom:10px;
+
+}
+#center input[type="submit"]{
+	color:white;
+	background:blue;
+	font-weight:bold;
+	width:100px;
+	height:30px;
+	margin:0 auto;
+}
+
+/* forget password page style */
+
+#forgetPageCenter{
+	width:250px;
+	height:280px;
+	background-color:rgba(0,0,0, 0.3);
+	margin:0 auto;
+	margin-top:60px;
+	padding: 20px;
+	border-radius:15px;
+	-webkit-border-radius: 15px;
+	font-weight:bold;
+	box-shadow:inset 5px 5px rgba(0,0,0, 0.3);
+}
+
+#forgetPageCenter button{
+	background-color:blue;
+	color:white;
+}
+
+/* home page style */
+
