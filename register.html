@@ -1,0 +1,152 @@
+<html>
+<head>
+<title> Register Page</title>
+	<link rel="Stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body >
+<div id="center">
+<h2> <center> Register Now!! </center></h2>
+<form method="POST" name="frm" action="register.php" onsubmit="return validate()">
+<input type= "text" name="fname" placeholder="Your First Name"/><br />
+<div id="fname_error" class="val_error" > </div>
+<input type= "text" name="lname" placeholder="Your Last Name"/><br />
+<div id="lname_error" class="val_error" > </div>
+<input type= "text" name="email" placeholder="Email address"/><br />
+<div id="email_error" class="val_error" > </div>
+<input type= "text" name="phone" placeholder="Phone number"/><br />
+<div id="phone_error" class="val_error" > </div>
+<input type="password" name = "pass1" placeholder="Password" /><br />
+<div id="pass1_error" class="val_error" > </div>
+<input type="password" name = "pass" placeholder="Confirm password" /><br />
+<div id="pass2_error" class="val_error" > </div><br /><br />
+
+<input type="submit" value="Register" />
+</form>
+</div>
+
+<!-- script-->
+<script type="text/javascript">
+
+	var fname = document.forms["frm"]["fname"];
+	var lname = document.forms["frm"]["lname"];
+	var email = document.forms["frm"]["email"];
+	var phone = document.forms["frm"]["phone"];
+	var password = document.forms["frm"]["pass1"];
+	var pass2 = document.forms["frm"]["pass2"];
+	
+	var fname_error = document.getElementById("fname_error");
+	var lname_error = document.getElementById("lname_error");
+	var email_error = document.getElementById("email_error");
+	var phone_error = document.getElementById("phone_error");
+	var pass1_error = document.getElementById("pass1_error");
+	var pass2_error = document.getElementById("pass2_error");
+	
+	fname.addEventListener("blur" , fnameverify , true);
+	lname.addEventListener("blur" , lnameverify , true);
+	email.addEventListener("blur" , emailverify , true);
+	phone.addEventListener("blur" , phoneverify , true);
+	password.addEventListener("blur", pass1verify , true);
+	pass2.addEventListener("blur" , pass2verify , true);
+	
+	function validate(){
+		if(fname.value==""){
+			fname.style.border = "2px solid red";
+			fname_error.textContent = "fname is required feature!";
+			fname.focus();
+			return false;		
+			
+		}
+		if(lname.value==""){
+			lname.style.border = "2px solid red";
+			lname_error.textContent = "lname is required feature!";
+			lname.focus();
+			return false;		
+			
+		}
+		if(email.value==""){
+			email.style.border = "2px solid red";
+			email_error.textContent = "email is required feature!";
+			email.focus();
+			return false;		
+			
+		}
+		if(phone.value==""){
+			phone.style.border = "2px solid red";
+			phone_error.textContent = "phone number is required feature!";
+			phone.focus();
+			return false;		
+			
+		}
+		if(pass1.value==""){
+			pass1.style.border = "2px solid red";
+			pass1_error.textContent = "password is required feature!";
+			pass1.focus();
+			return false;		
+			
+		}
+		if(pass2.value==""){
+			pass2.style.border = "2px solid red";
+			pass2_error.textContent = "Confirm your password!";
+			pass2.focus();
+			return false;		
+			
+		}
+		
+		if(password.value !=pass2.value){
+			pass.style.border="1px solid red";
+			pass2.style.border="1px solid red";
+			pass2_error.innerHTML="Passwords do not match!!";
+			return false;
+		}
+	}
+	
+	function fnameverify(){
+			if(fname.value!=""){
+				fname.style.border="2px solid #0000ee";
+				fname_error.innerHTML ="";
+				return true;
+			}
+	}
+	function lnameverify(){
+			if(lname.value!=""){
+				lname.style.border="2px solid #0000ee";
+				lname_error.innerHTML ="";
+				return true;
+			}
+	}
+	function emailverify(){
+			if(email.value!=""){
+				email.style.border="2px solid #0000ee";
+				email_error.innerHTML ="";
+				return true;
+			}
+	}
+	
+	function phoneverify(){
+			if(phone.value!=""){
+				phone.style.border="2px solid #0000ee";
+				phone_error.innerHTML ="";
+				return true;
+			}
+	}
+	function pass1verify(){
+			if(pass1.value!=""){
+				pass1.style.border="2px solid #0000ee";
+				pass1_error.innerHTML ="";
+				return true;
+			}
+	}
+	function pass2verify(){
+			if(pass2.value!=""){
+				pass2.style.border="2px solid #5E6E66";
+				pass2_error.innerHTML ="";
+				return true;
+			}
+	}
+	
+</script>
+
+</body>
+
+</html>
